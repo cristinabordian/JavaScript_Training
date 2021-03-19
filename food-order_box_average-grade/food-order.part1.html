@@ -1,0 +1,33 @@
+
+<script>
+    //IN: our app asks the user for the desired qty
+    //FACT: we know the price of each item
+    //OUT: total cost 
+
+
+    //data 
+    foodName         = "Salad"  //data type: string
+    foodPriceValue   = 15.00   //data type: number 
+    foodPriceUnits   = "MDL"
+    deliveryFee      = 20.00
+
+    //clientQuantity   = 1
+    // For the option where clients enters the qty themselves
+    //alert(" We have " + foodName )
+    clientQuantity = prompt( 
+        "MENU\n\n" + foodName + "\n\nHow many would you like to order? "
+    )
+
+   //  \n - backslash/n acts similar to the br tag in html, prints text in a new line
+
+    totalCost        = foodPriceValue * clientQuantity + deliveryFee
+
+    alert( 
+        "You've ordered " + clientQuantity +  
+        "\nYour delivery fee is " + deliveryFee + foodPriceUnits +
+        "\nbill " + totalCost + foodPriceUnits
+    )
+    
+   //HW1: apply a delivery tax, print and include in total price
+</script>
+

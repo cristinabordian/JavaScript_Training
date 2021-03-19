@@ -1,0 +1,20 @@
+<script>
+//IN: 3 grades
+//???? : general avg
+//OUT: avg grade
+
+// 9 10 8 ->3036 <- erroare din cauza prompt ptr ca acesta printeaza text
+//promptul ne da urmatoarea valoare in asa mod: "9" + "10" + "8" ->9108/3=3036
+//uneori dataele cand vin din alte parti nu intotdeauna vor fi de tip number si desi JS le va interpreta, operatiile vor fi gresite
+//Cum corectam? Cand vrem un text sa fie interpretat ca numar, punem un + in fata
+
+grade1 = +prompt("1")
+grade2 = +prompt("2")
+grade3 = +prompt("3")
+
+avgGrade = ( grade1 + grade2 + grade3 ) / 3
+
+alert(avgGrade)
+
+
+</script>

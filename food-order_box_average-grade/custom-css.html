@@ -1,0 +1,37 @@
+<script>
+    //display a square with color + size using prompt()
+
+    color = prompt("Enter color name or code")
+    size = prompt("Enter size in pixels")
+    borderWidth = prompt("Enter desired border width in pixels")
+    borderColor = prompt("Enter desired border color or code")
+    lineStyle = prompt("Pick a line style: solid, dotted, groove, dashed")
+
+
+    document.write(
+        //we can mane the code below a template
+        `<div style="
+            background: ${color};
+            width: ${size}px;
+            height: ${size}px;
+            border-width: ${borderWidth}px;
+            border-color: ${borderColor};
+            border-style: ${lineStyle};"
+            >
+            
+     </div>`
+    )
+
+    // ca JS sa vada codul html si sa il procese correct am imbracat codul html in ``
+    // !!! String in JS can be marked by "", '', ``
+
+    //When out JS is market by `` if we don't want to keep using + signs in our code
+    // we can use ${}
+
+    //HW3. -> using prompt, add options for border width & color
+</script>
+
+
+
+
+
