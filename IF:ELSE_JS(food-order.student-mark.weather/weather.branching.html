@@ -1,0 +1,20 @@
+<script>
+    // IN: what we know - meteo data
+    // OUT: document -> print img associated with the weather 
+
+
+    temperatureC = 30 //celsius
+
+    LIMIT = 18 //limit to determine if it's cold/warm
+
+    if ( temperatureC >= LIMIT ) {
+        document.write( "<h1> WARM </h1>" )
+        document.write( "<br><img src='https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/96/Status-weather-clear-icon.png' >" )
+    }  else {
+        document.write( "<h1> COLD </h1>" )
+        document.write( "<br><img src='https://icons.iconarchive.com/icons/paomedia/small-n-flat/96/snow-flake-icon.png' >" )
+    }
+
+
+
+</script>

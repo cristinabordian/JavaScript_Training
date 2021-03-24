@@ -1,0 +1,148 @@
+<script>
+
+
+food_1_name  = "Pizza"
+food_1_price = 75.50
+food_1_AvailQ = 6
+
+food_2_name  = "Salad"
+food_2_price = 25.30
+food_2_AvailQ = 5
+
+food_3_name = "Soup"
+food_3_price = 15.90
+food_3_AvailQ = 3
+
+food_4_name = "Tacos"
+food_4_price = 35.60
+food_4_AvailQ = 10
+
+priceUnits   = "MDL"
+
+DELIVERY_MARK = 200
+
+deliveryFee = 30
+
+alert(
+    "################### FOOD ##################\n1. " 
+    + food_1_name + "........................... "  + food_1_price + priceUnits +
+    "\n2. " +  food_2_name +  "........................... "  + food_2_price + priceUnits +
+    "\n3. "  +  food_3_name + " ..........................."  + food_3_price + priceUnits +
+    "\n4. "  +  food_4_name + " ..........................."  + food_4_price + priceUnits +
+    "\n#################  FOOD ####################"
+)
+
+
+
+food_1_qty = parseInt( prompt(`How many "${food_1_name}" would you like? Enter 0 if none` ) )
+food_2_qty = parseInt( prompt(`How many "${food_2_name}" would you like? Enter 0 if none` ) )
+food_3_qty = parseInt( prompt(`How many "${food_3_name}" would you like? Enter 0 if none` ) )
+food_4_qty = parseInt( prompt(`How many "${food_4_name}" would you like? Enter 0 if none` ) )
+
+//parseInt in cazul de mai sus ne va printa mereu o cifra intreaga. Este cu atat mai mult avantajos de folosit
+// pentru ca cantitatea mereu trebuie sa fie un numar intreg. Nu putem comana 1.5 pizzas
+//parseInt() is a JavaScript function that parses a string and returns an integer
+
+// ${identifier} identifies a variable, function or property. An identifier is part of the code. 
+
+if(food_1_qty <= food_1_AvailQ && food_2_qty <=  food_2_AvailQ &&  food_3_qty <=  food_3_AvailQ && food_4_qty <=  food_4_AvailQ) {
+  cost_1 = food_1_price * food_1_qty
+  cost_2 = food_2_price * food_2_qty
+  cost_3 = food_3_price * food_3_qty
+  cost_4 = food_4_price * food_4_qty
+  totalCost = parseInt( cost_1 + cost_2 + cost_3 + cost_4 )
+  
+} else {
+   alert("Sorry, we cannot complete this order due to not having sufficient one or multiple items from the menu. We are able to offer only:\n" +
+   food_1_AvailQ + " " + food_1_name +
+   "\n" + food_2_AvailQ + " " + food_2_name + 
+   "\n" + food_3_AvailQ + " " + food_3_name +
+   "\n" + food_4_AvailQ + " " + food_4_name )
+}
+
+// cost_1 = food_1_price * food_1_qty
+// cost_2 = food_2_price * food_2_qty
+// cost_3 = food_3_price * food_3_qty
+// cost_4 = food_4_price * food_4_qty
+
+totalCost = parseInt( cost_1 + cost_2 + cost_3 + cost_4 )
+totalCostWithDelivery = totalCost + deliveryFee
+
+if( totalCost >= DELIVERY_MARK) {
+  freeDelivery = totalCost >= DELIVERY_MARK
+  alert( "You have a free delivery, press OK to see the bill" )
+
+  document.write(
+    `<div style="
+      width: 600px;
+      height: 400px;
+      background-color: rgb(240, 240, 240);
+
+    ">
+    &#128312;&#128312;&#128312;&#128312;&#128312; BILL &#128312;&#128312;&#128312;&#128312;&#128312;
+      <ol>
+        <li> ${food_1_name} x  ${food_1_qty}  = ${cost_1} ${priceUnits} </li>
+        <li> ${food_2_name} x  ${food_2_qty}  = ${cost_2} ${priceUnits} </li>
+        <li> ${food_3_name} x  ${food_3_qty}  = ${cost_3} ${priceUnits} </li>
+        <li> ${food_4_name} x  ${food_4_qty}  = ${cost_4} ${priceUnits} </li>
+    </ol>
+    &nbsp;&nbsp;Total: ${totalCost} ${priceUnits}
+    <br>&nbsp;&nbsp;Free Delivery: ${freeDelivery}
+
+    <br>&#128312;&#128312;&#128312;&#128312;&#128312; BILL &#128312;&#128312;&#128312;&#128312;&#128312;
+    </div>`
+)
+
+} else if (totalCost < DELIVERY_MARK) {
+  freeDelivery = totalCost >= DELIVERY_MARK
+  alert(" The delivery fee for orders less than 200MDL costs 30MDL. The fee will be added at checkout")
+  document.write(
+    `<div style="
+      width: 600px;
+      height: 400px;
+      background-color: rgb(240, 240, 240);
+
+    ">
+    &#128312;&#128312;&#128312;&#128312;&#128312; BILL &#128312;&#128312;&#128312;&#128312;&#128312;
+      <ol>
+        <li> ${food_1_name} x  ${food_1_qty}  = ${cost_1} ${priceUnits} </li>
+        <li> ${food_2_name} x  ${food_2_qty}  = ${cost_2} ${priceUnits} </li>
+        <li> ${food_3_name} x  ${food_3_qty}  = ${cost_3} ${priceUnits} </li>
+        <li> ${food_4_name} x  ${food_4_qty}  = ${cost_4} ${priceUnits} </li>
+    </ol>
+    &nbsp;&nbsp;Total (including the delivery fee): ${totalCostWithDelivery} ${priceUnits}
+    <br>&#128312;&#128312;&#128312;&#128312;&#128312; BILL &#128312;&#128312;&#128312;&#128312;&#128312;
+    </div>`
+ )
+}
+
+//freeDelivery = totalCost >= 200
+
+// document.write
+//     `<div style="
+//       width: 600px;
+//       height: 400px;
+//       background-color: rgb(240, 240, 240);
+
+//     ">
+//     &#128312;&#128312;&#128312;&#128312;&#128312; BILL &#128312;&#128312;&#128312;&#128312;&#128312;
+//       <ol>
+//         <li> ${food_1_name} x  ${food_1_qty}  = ${cost_1} ${priceUnits} </li>
+//         <li> ${food_2_name} x  ${food_2_qty}  = ${cost_2} ${priceUnits} </li>
+//         <li> ${food_3_name} x  ${food_3_qty}  = ${cost_3} ${priceUnits} </li>
+//         <li> ${food_4_name} x  ${food_4_qty}  = ${cost_4} ${priceUnits} </li>
+//     </ol>
+//     &nbsp;&nbsp;Total: ${totalCost} ${priceUnits}
+//     <br>&nbsp;&nbsp;Free Delivery: ${freeDelivery}
+
+//     <br>&#128312;&#128312;&#128312;&#128312;&#128312; BILL &#128312;&#128312;&#128312;&#128312;&#128312;
+//     </div>`
+// )
+
+
+
+
+
+
+
+</script>

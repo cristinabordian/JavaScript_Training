@@ -1,0 +1,22 @@
+<script>
+  //IN: student general mark
+  //OUT: yes/no (accepted/rejected)
+
+  //variable NAMING CONVENTION - use latin letters, numbers (never start with a number), use camelCase principle
+   
+   //variable
+  studentMark  = +prompt("Enter your mark") //prompt will print string data by default, adding + in front of prompt to be sure it will print a number
+
+  studentBudget = +prompt("Enter your income")
+
+  //constant variable
+  APPROVAL_MARK  = 7.0
+  CONTRACT_COST = 10000
+  
+ //  || - stands for condition "or"
+ approved = studentMark >= APPROVAL_MARK || studentBudget >= CONTRACT_COST
+
+ alert("Is the student approved? " + approved)
+
+
+</script>

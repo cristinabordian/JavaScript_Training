@@ -1,0 +1,47 @@
+<!-- FOOD ORDER DILEMA-->
+
+<script>
+
+    //Below code can be named a LINEAR CODE - it will run no matter the situation, will not take into consideration any dependencies
+    // in the example below code will run and it won't verify if we have enough foodAvailQ
+    //LINEAR Code is not very intelligent
+    //ADAPTIVE/CONDITIONAL Code is best, intelligent and can be used in decision making
+   foodName    = "Salad" //string
+   foodPrice   = 15.00  //number
+   foodAvailQ  = 5     //number
+
+   clientQ = parseInt(prompt( "How many " + foodName + " would you like to order?" ))
+
+   //Conditional Code 
+
+   if(clientQ <= foodAvailQ) {
+      cost = foodPrice * clientQ
+        alert("Total Cost: " + cost )
+   } else {
+       alert(" Sorry, we are able to offer only  " + foodAvailQ + " " + foodName )
+   }
+   
+   
+   
+  //HW: 
+  // 1. add availability (if else)
+  // 2. add free delivery (if else)
+   
+
+
+
+
+  
+   //FLOW CONTROL
+   // Linear (Dump) vs NON-Linear (Smart) behaviour
+
+   // Types of control constructions
+
+    // 1 Branching - ramificatie - IF ELSE
+    // 2. Looping
+
+
+
+</script>
+
+
