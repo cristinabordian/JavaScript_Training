@@ -1,0 +1,40 @@
+<!--
+    aka - media query
+-->
+
+<script>
+  //IN Data 
+
+  //const BREAK_POINT = 1100
+  const XS_BREAKPOINT = 560 //px
+  const S_BREAKPOINT  = 980 //px
+  const MED_BREAKPOINT = 1200 //px
+  //----------------------- x ---------------------window size 
+  //      mobile         1100       desktop
+
+  let windowWidth = innerWidth //there is also innerHeight
+
+  //CONDITION 
+
+  if( windowWidth >=  200 && windowWidth <= XS_BREAKPOINT ) {
+     alert( "Window Size: Extra Small " +  windowWidth)
+  } else if (windowWidth > XS_BREAKPOINT && windowWidth <= S_BREAKPOINT ) {
+     alert("Window Size: Small " +  windowWidth )
+  }  else if(windowWidth > S_BREAKPOINT && windowWidth <= MED_BREAKPOINT) {
+    alert("Window Size: Medium " + windowWidth)
+  } else if(windowWidth > MED_BREAKPOINT && windowWidth <= 3000) {
+    alert("Window Size: Large " + windowWidth) 
+  } else if(windowWidth < 200 || windowWidth > 3000) {
+    alert("Beats the hell out of me what windows sise this is, try on another planet!")
+  }
+   
+
+  //               560px                980px               1200px
+  // |---------------x-------------------x-------------------x-----------------> Window size 
+  //    Extra Small          Small               Medium            Large
+
+  //HW1: add breakpoints: xs-560px, small- 980px, medium, large - -1200px
+  // + size <60 - error, valoare gresita
+  // + size > 3000px - error, this can only be found on Mars message 
+
+</script>
