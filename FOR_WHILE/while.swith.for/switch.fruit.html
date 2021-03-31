@@ -1,0 +1,36 @@
+<script>
+  //print img of fruit or vegetable based on input
+
+  var fruit = prompt("Enter your favorite fruit or vegetable from the list: apple, banana, carrot, lettuce, strawberry, orange, grape")
+
+  switch (fruit) {
+      case "apple": 
+       document.write(`<img src="https://chowhound3.cbsistatic.com/resize/964dcb00eb868484d7ea14e6d7ec82bcbf79354b/2018/10/how-did-apples-get-their-name-chowhound.jpg?fit=bounds&width=1200" alt=""width="800" height="600">`); 
+      break;
+
+      case "banana": 
+       document.write(`<img src="https://foodandnutrition.org/wp-content/uploads/SavorBananas.jpg" alt="" width="800" height="600">`); 
+      break;
+
+      case "carrot": 
+       document.write(`<img src="https://assets.bonappetit.com/photos/5cab6c0e3559180deec8b055/8:5/w_4584,h_2865,c_limit/Basically-Carrots.jpg" alt="" width="800" height="600">`); 
+      break;
+      case "lettuce": 
+       document.write(`<img src="https://static.onecms.io/wp-content/uploads/sites/34/2018/12/12164948/gettyimages-888575586.jpg" alt="" width="900" height="600">`); 
+      break;
+      case "strawberry": 
+       document.write(`<img src="http://fruitinn.com/uploads/products/2115507652.jpg" alt="" width="900" height="600">`); 
+      break;
+      case "orange": 
+       document.write(`<img src="https://rurallivingtoday.com/wp-content/uploads/types-of-oranges-1.jpeg"alt="">`); 
+      break;
+      case "grape": 
+       document.write(`<img src="https://www.keckmedicine.org/wp-content/uploads/2016/10/grapes-have-so-many-health-benefits-like-fighting-against-cancer-and-boosting-cardio.jpg" alt="">`); 
+      break;
+
+      default: 
+       document.write(`<img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Fail_stamp.jpg" alt="">`)
+       document.write ("Sorry, the farm doesn't grow this fruit or vegetable.")
+  }
+
+</script>
