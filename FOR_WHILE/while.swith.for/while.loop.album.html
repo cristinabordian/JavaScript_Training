@@ -1,0 +1,25 @@
+<!--
+    album of pictures
+-->
+
+<script>
+//afisam automat un set de poze prin JS
+// 1 create variable
+let i = 1
+
+while (i <= 9) {
+    document.write(`<!-- ${i} start-->`)
+   document.write(`
+       <img src="images/${i}-300x300.jpeg">
+   `)
+
+    if (i == 3 || i== 6) {
+        document.write(`<br>`)
+    }
+    document.write(`<!-- ${i} end-->`)
+
+    i++
+}
+
+</script>
+

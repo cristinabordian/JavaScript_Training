@@ -1,0 +1,84 @@
+<script>
+  // switch - > branching 
+  // FORMULA
+
+  // switch (expression) {  ->  === identic
+  //  case value_1: 
+  //              code_1
+  // break
+
+  //  case value_2: 
+  //              code_2
+  // break
+  //    ...
+  //  case value_n: 
+  //              code_n
+  // break
+
+  // default: 
+  //       code_default
+  //break
+
+
+  //SWITCH va face o comparatie stricta (===) dintre expresie si fiecare valoare pana nu gaseste solutia
+
+
+
+  // Choose the day 
+
+  
+
+  //HW1 using if/else + prompt 
+  // - what type of calendar (beginning of week Sundar/Monday )
+  //prompt introdu calendar type
+  //if/else
+
+  let businessWeek = 1
+  let culturalWeek = 2
+  let calendarType = prompt("Enter type of calendar: Gregorian or New Testament")
+
+
+  let day = parseInt(prompt("Day of the week")) // 1..7
+   if (calendarType ==1 ) {
+        switch (day) {   // === identic !!!!!IMPORTANT DE RETINUT cum se compara
+            case 1: document.write("Monday"); break // break va opri executia daca numarul introdus este 1, in caz contrar se duce la urmatorul
+            case 2: document.write("Tuesday"); break // "2" === 2 (valoarea introdusa se compara cu valorea dupa case)
+            case 3: document.write("Wednesday"); break
+            case 4: document.write("Thursday"); break
+            case 5: 
+                let times = 4
+                while(times > 0) {
+                    document.write("Yeeey!!!!!!!!")
+                    times--
+                }
+            document.write("Friday"); break //fara break se va afisa si case 5 si case 6
+            case 6: document.write("Saturday"); break
+            case 7: document.write("Sunday"); break
+
+            default: document.write("Try another cookie")   // orice alta valoare inafara de [1-7]
+        }
+   } else if (calendarType ==2) {
+         switch (day) {   // === identic !!!!!IMPORTANT DE RETINUT cum se compara
+                case 1: document.write("Sunday"); break // break va opri executia daca numarul introdus este 1, in caz contrar se duce la urmatorul
+                case 2: document.write("Monday"); break // "2" === 2 (valoarea introdusa se compara cu valorea dupa case)
+                case 3: document.write("Tuesday"); break
+                case 4: document.write("Wednesday"); break
+                case 5: document.write("Thursday"); break //fara break se va afisa si case 5 si case 6
+                case 6: 
+                    
+                    let times = 4
+                        while(times > 0) {
+                            document.write("Yeeey!!!!!!!!")
+                            times--
+                        }
+                document.write("Friday"); break
+
+                case 7: document.write("Saturday"); break
+
+                default: document.write("Try another cookie")   // orice alta valoare inafara de [1-7]
+            }
+       } else {
+           document.write("This type of calendar doesn't exist")
+       }
+
+</script>
