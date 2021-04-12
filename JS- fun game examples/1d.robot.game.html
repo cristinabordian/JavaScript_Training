@@ -1,0 +1,53 @@
+
+<button onclick="moveLeft();drawMap()">◄</button>
+<span id="gameMap"></span>
+<button onclick="moveRight();drawMap()">►</button> 
+<!-- //dupa ce dam click pe button right, vom apela a doua functie drawMap -->
+
+
+
+<script>
+//unidimensional map - robot can move in one direction only
+//--------------x------------->
+const LEN = 20
+let   rx = 10
+
+//create a function that draws 20 elements 
+
+
+function drawMap() {
+    gameMap.innerHTML = "" 
+    for(let x=1; x<=LEN; x++) {
+        if (x == rx ) {
+            gameMap.innerHTML += "▶"
+    } else {
+        gameMap.innerHTML += "┄"
+    }
+}
+    
+}
+
+//HW1: finish moveLeft function - completed
+//HW2: limit movement start < > end
+
+function moveLeft() {
+  if(rx >= 2 ) {
+     rx--
+   } else if (rx <= 1) {
+    rx = 1
+  }
+  
+}
+
+function moveRight(){
+    if(rx <= 19) {
+        rx++
+    } else {
+        rx = 20
+    }
+}
+
+drawMap()
+
+</script>
+

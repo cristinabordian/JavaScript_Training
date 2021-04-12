@@ -1,0 +1,47 @@
+<script>
+    const PARKING_PLACES = 7
+    let freePlace = 3
+
+    let decor = ""
+    for (let x = 1 ; x <= PARKING_PLACES * 5; x++ ) {
+        decor += "#"
+    }
+    console.log(decor)
+
+    let places = ""
+    for (let x = 1; x <= PARKING_PLACES; x++) {
+
+        if(x === freePlace) {
+            places += "|  |"
+        } else {
+            places += "| X |"
+        }
+        
+       
+        
+        
+        
+        
+    }
+    console.log(places)
+
+    decor = ""
+    for (let x = 1; x <= PARKING_PLACES * 5; x++) {
+        decor += "#"
+    }
+    console.log(decor)
+
+
+  //de ce a fost nevoie de variabilele decor si places ? 
+  //     -- daca nu declaram valoarea initiala atunci codul nu va putea executa operatiunea si printa rez dorit
+//de ce cele 2 variabile mentionate mai sus au fost declarate pana la cicluri? 
+ //      -- pentru ca toate functiile sa "le vada" 
+//ce inseamna const si de ce numele variabilei declarate prin acest prefix difera ca sintaxa de celelalte variabile?
+//    -- const este o variabila care din moment ce este declarata nu mai poate fi schimbata, capitalizarea ajuta sa deosebim dintre o constanta si o variablia care se schimba
+
+
+
+
+
+
+</script>

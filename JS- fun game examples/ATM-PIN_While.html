@@ -1,0 +1,59 @@
+<script>
+   //write a script for an ATM 
+   //withdraw money, 3 attempts for PIN
+
+
+   const PIN   = "1234" //why not number?
+   let pin     = ""
+   let tries   = 0
+   let balance = 1000000.00 
+   let dailyLimit = 50000.00 
+
+    while (true) { //operatiune repetitiva/ciclu
+
+        pin = prompt("Enter PIN: ") //stept 1 - enter code 
+
+        tries++   // stept 2 - count tries 
+
+        if ( pin == PIN ) {  //stept 3 - verify PIN
+        ///////////////////////////////////
+        alert(`
+        
+             ACCESS GRANTED\n\n
+             your balance is: ${balance}MDL
+             `
+        )
+
+        let money = +prompt("Enter amount to withdraw")
+           if (money > balance) {
+               alert("We are sorry, you don't have suficient funds in your account.")
+           } else if (money > dailyLimit) {
+             alert("The amount exceeds the daily limit allowed to withdraw.")
+            } else {
+
+                balance -= money   //balance = balance - money 
+                alert(`
+                SUCCESS!!!\n\n
+                your remaining balance: ${balance}MDL
+            `)
+           }
+        
+        //HW1: upgrade - check balance /if we have enough money
+        //HW2: max money - 50000.00
+       
+       
+
+        break
+
+        } else {
+            alert("WRONG PIN")
+            if (tries === 3) {
+                alert("CARD BLOCKED. Please reach out to your bank.")
+                break //break can be used in any repetitive code
+            }
+        }
+
+        
+    }
+
+</script>
