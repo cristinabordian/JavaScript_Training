@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel | Javascript</title>
+    <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+</head>
+<body onkeydown="prevK(); nextK()"  >
+
+    <div id="carousel">
+        <div class="slides" id="carouselSlides">
+            
+        </div>
+        
+        <div id="carouselTitles"></div>
+        <div id="carouselIndicators"></div>
+        
+        <button onclick="prev()"  id="prev"><i class="fas fa-angle-double-left"></i></button>
+        <button onclick="next()" id="next"> <i class="fas fa-angle-double-right"></i></button>
+        <button onclick="play()" id="play"><i class="fas fa-play"></i></button>
+
+
+    </div>
+
+    <script src="carousel.js"></script>
+    
+</body>
+</html>
